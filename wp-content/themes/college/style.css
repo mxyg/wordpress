@@ -453,6 +453,7 @@ html {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	height: 100%;
 }
 
 *,
@@ -466,6 +467,7 @@ html {
 
 body {
 	background: #1a1a1a;
+	height: 100%;
 	/* Fallback for when there is no custom background color defined. */
 }
 
@@ -601,7 +603,7 @@ input[type="reset"][disabled]:focus,
 input[type="submit"],
 input[type="submit"][disabled]:hover,
 input[type="submit"][disabled]:focus {
-	background: #1a1a1a;
+	background: #2e6da4;
 	border: 0;
 	border-radius: 2px;
 	color: #fff;
@@ -1572,7 +1574,7 @@ blockquote:after,
 }
 .other_model {
 	float:left;
-	font-size: 14px;
+	font-size: 13px;
 	width:100%;
 	padding: 0 20px;
 	margin: 13px 0 0 0;
@@ -1602,6 +1604,7 @@ blockquote:after,
 }
 .other_model .date {
 	float:right;
+	display:none;
 }
 .home_model_content .date {
 	float:right;
@@ -1625,7 +1628,7 @@ blockquote:after,
 
 .site {
 	background-color: #fff;
-	float:left;
+	height:100%;
 }
 
 .site-inner {
@@ -1780,8 +1783,7 @@ blockquote:after,
 .entry-content,
 .entry-footer,
 .page-content {
-	margin-right: 7.6923%;
-	margin-left: 7.6923%;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .entry-title {
@@ -1790,9 +1792,14 @@ blockquote:after,
 	font-size: 1.75rem;
 	font-weight: 700;
 	line-height: 1.25;
-	margin-bottom: 1em;
+	color: #007acc;
+    text-align: center;
 }
-
+.entry-date-time {
+	background: #d9edf7;
+	text-align: center;
+	margin: 10px;
+}
 .entry-title a {
 	color: #1a1a1a;
 }
@@ -1823,6 +1830,7 @@ a.post-thumbnail:focus {
 .entry-content,
 .entry-summary {
 	border-color: #d1d1d1;
+	padding: 0 10px;
 }
 
 .entry-content h1,
@@ -2275,7 +2283,7 @@ body.search-no-results .page-header {
 
 .comments-title,
 .comment-reply-title {
-	border-top: 4px solid #1a1a1a;
+	border-top: 4px solid #007acc;
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 23px;
 	font-size: 1.4375rem;
@@ -2949,7 +2957,6 @@ p > video {
 		font-size: 33px;
 		font-size: 2.0625rem;
 		line-height: 1.2727272727;
-		margin-bottom: 0.8484848485em;
 	}
 
 	.entry-content blockquote.alignleft,
@@ -3478,8 +3485,6 @@ p > video {
 	.no-sidebar .page-header,
 	.no-sidebar .page-content,
 	.no-sidebar .content-bottom-widgets {
-		margin-right: 15%;
-		margin-left: 15%;
 	}
 
 	.widecolumn {
@@ -3538,7 +3543,6 @@ p > video {
 		font-size: 40px;
 		font-size: 2.5rem;
 		line-height: 1.225;
-		margin-bottom: 1.05em;
 	}
 
 	.format-aside .entry-title,
@@ -3639,8 +3643,6 @@ p > video {
 	}
 
 	body:not(.search-results) article:not(.type-page) .entry-content {
-		float: right;
-		width: 71.42857144%;
 	}
 
 	body:not(.search-results) article:not(.type-page) .entry-content > blockquote.alignleft.below-entry-meta {
@@ -3701,10 +3703,6 @@ p > video {
 	}
 
 	body.no-sidebar:not(.search-results) article:not(.type-page) .entry-content {
-		float: left;
-		margin-right: -100%;
-		margin-left: 34.99999999%;
-		width: 50.00000001%;
 	}
 
 	body.no-sidebar:not(.search-results) article:not(.type-page) .entry-footer {
