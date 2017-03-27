@@ -23,10 +23,10 @@
 define('DB_NAME', 'rdlsyj');
 
 /** MySQL数据库用户名 */
-define('DB_USER', 'admin');
+define('DB_USER', 'rdlsys');
 
 /** MySQL数据库密码 */
-define('DB_PASSWORD', 'admin');
+define('DB_PASSWORD', 'rdlsys');
 
 /** MySQL主机 */
 define('DB_HOST', '127.0.0.1');
