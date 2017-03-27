@@ -7,10 +7,14 @@
  * @since Twenty Sixteen 1.0
  */
 ?>
+<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+首页
+</a>/
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<div class="entry-date-time">发布时间：<?php the_time( 'Y-m-d h-m-s' ); ?></div>
 	</header><!-- .entry-header -->
 
 	<?php twentysixteen_excerpt(); ?>
@@ -36,7 +40,7 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+	<!--<footer class="entry-footer">
 		<?php twentysixteen_entry_meta(); ?>
 		<?php
 			edit_post_link(
@@ -49,5 +53,5 @@
 				'</span>'
 			);
 		?>
-	</footer><!-- .entry-footer -->
+	</footer>--><!-- .entry-footer -->
 </article><!-- #post-## -->
