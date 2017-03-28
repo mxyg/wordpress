@@ -14,31 +14,42 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentysixteen' ), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
-
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">首页</a>/<?php the_category('/')?>
+		<div class="content_model">
+			<h3><span><?php printf( __( 'Search Results for: %s', 'twentysixteen' ), '<span>“' . esc_html( get_search_query() ) . '”</span> ' ); ?></span></h3>
+			<ul>
 			<?php
-			// Start the loop.
+			// Start the Loop.
 			while ( have_posts() ) : the_post();
-
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
-
+			?>
+						<li>
+							<a href="<?php the_permalink(); ?>"><span class="date">[<?php the_time('Y-m-d'); ?>]</span><span class="title"><img src="<?php echo get_template_directory_uri().'/img/biao3.gif'?>">&nbsp;&nbsp;<?php the_title(); ?></span></a>
+							
+						</li>
+				
+			
+			<?php
 			// End the loop.
 			endwhile;
 
 			// Previous/next page navigation.
-			the_posts_pagination( array(
-				'prev_text'          => __( 'Previous page', 'twentysixteen' ),
-				'next_text'          => __( 'Next page', 'twentysixteen' ),
-				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>',
-			) );
+			
+			?>
+			</ul>
 
+			<div class="content_pagination">
+			共<?php echo get_the_category()[0]->count?>条新闻 
+			<?php
+				the_posts_pagination( array(
+					'prev_text'          => __( 'Previous page', 'twentysixteen' ),
+					'next_text'          => __( 'Next page', 'twentysixteen' ),
+					'before_page_number' => '第',
+					'after_page_number' => '页',
+			) );
+			?>
+			</div>
+		</div>
+		<?php
 		// If no content, include the "No posts found" template.
 		else :
 			get_template_part( 'template-parts/content', 'none' );

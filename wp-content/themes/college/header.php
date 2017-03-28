@@ -22,6 +22,19 @@
 </head>
 
 <body <?php body_class(); ?>>
+<!--[if lte IE 8]>
+<div id="ie6-warning"><p>本页面采用HTML5+CSS3，您正在使用老版本 Internet Explorer ，在本页面的显示效果可能有差异。建议您升级到 <a href="http://www.microsoft.com/china/windows/internet-explorer/" target="_blank">Internet Explorer 9</a> 或以下浏览器：
+    <br>
+<a href="http://www.mozillaonline.com/"><img src="__PUBLIC__/image/browser/firefox.png">Firefox</a> / 
+<a href="http://www.baidu.com/s?wd=google%E6%B5%8F%E8%A7%88%E5%99%A8"><img src="__PUBLIC__/image/browser/chrome.png">Chrome</a> / 
+<a href="http://www.apple.com.cn/safari/"><img src="__PUBLIC__/image/browser/Safari.png">Safari</a> / 
+<a href="http://www.operachina.com/"><img src="__PUBLIC__/image/browser/Opera.png">Opera</a></p></div>
+<style type="text/css">
+/*ie6提示*/
+#ie6-warning{width:100%;background:#ffffe1;padding:5px 0;font-size:12px}
+#ie6-warning p{width:960px;margin:0 auto;}
+  </style>
+<![endif]-->
 <div id="page" class="site">
 	<div class="site-inner">
 		<!--<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentysixteen' ); ?></a>-->
@@ -81,19 +94,6 @@
 						</nav><!-- .main-navigation -->
 					<?php endif; ?>
 
-					<?php if ( has_nav_menu( 'social' ) ) : ?>
-						<nav id="social-navigation" class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'twentysixteen' ); ?>">
-							<?php
-								wp_nav_menu( array(
-									'theme_location' => 'social',
-									'menu_class'     => 'social-links-menu',
-									'depth'          => 1,
-									'link_before'    => '<span class="screen-reader-text">',
-									'link_after'     => '</span>',
-								) );
-							?>
-						</nav><!-- .social-navigation -->
-					<?php endif; ?>
 				</div><!-- .site-header-menu -->
 			<?php endif; ?>
 		</header><!-- .site-header -->
