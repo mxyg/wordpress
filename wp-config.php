@@ -87,6 +87,9 @@ define('WP_DEBUG', false);
 define('WP_ZH_CN_ICP_NUM', true);
 
 /* 好了！请不要再继续编辑。请保存本文件。使用愉快！ */
+define('WP_HOME', 'http://'.$_SERVER['HTTP_HOST']);
+ 
+define('WP_SITEURL', 'http://'.$_SERVER['HTTP_HOST']);
 
 /** WordPress目录的绝对路径。 */
 if ( !defined('ABSPATH') )
